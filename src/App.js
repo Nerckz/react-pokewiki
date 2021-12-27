@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { Home } from './pages/home/Home';
+import { PokemonPage } from './pages/pokemonPage/PokemonPage';
+import { useFetchGetPokemons } from './hooks/useFetchGetPokemons';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+} from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export const App = () => {
+    const { pokemons } = useFetchGetPokemons();
+    const [pokePageUrl, setPokePageUrl] = useState([]);
+
+    return (
+        <Router>
+            <Switch>
+                <Route exact path="/">
+                    <Home items={pokemons} setPokePageUrl={setPokePageUrl} />
+                </Route>
+
+                <Route exact path="/pokeinfo">
+                    <PokemonPage pokemonUrl={pokePageUrl} />
+                </Route>
+            </Switch>
+        </Router>
+    )
 }
-
-export default App;

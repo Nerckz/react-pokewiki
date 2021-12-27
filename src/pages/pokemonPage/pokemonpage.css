@@ -1,0 +1,124 @@
+.pokePageContainer {
+    height: 100%;
+    width: 100%;
+}
+
+.pokeInfoCard {
+    background: linear-gradient(137deg, rgba(255,81,0,1) 0%, rgba(0,0,0,1) 100%);
+    border-radius: 30px;
+    height: auto;
+    margin: auto;
+    margin-top: 70px;
+    margin-bottom: 30px;
+    overflow: hidden;
+    width: 85%;
+}
+
+.pokeInfoCardTop {
+    text-align: center;
+    width: 100%;
+}
+
+.pokeInfoCardTop h2 {
+    color: white;
+    padding: 10px;
+}
+
+.pokeInfoCardCenter {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+}
+
+.pokeAbilities {
+    height: 100%;
+    margin-top: -60px;
+    padding: 10px;
+    text-align: center;
+    width: 40%;
+}
+
+.pokeAbilities h2 {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.pokeAbilities ul li {
+    color: white;
+    margin-left: 0px;
+    padding: 2px;
+}
+
+.pokeImgContainer {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    width: 50%;
+}
+
+.pokeImgAvatar {
+    height: 100%;
+    width: 60%;
+}
+
+.pokeStats {
+    height: 100%;
+    padding: 10px;
+    width: 40%;
+}
+
+.pokeStats h2 {
+    color: white;
+    font-size: 18px;
+    text-align: center;
+}
+
+.pokeStats ul {
+    margin-top: 20px;
+}
+
+.statName {
+    color: white;
+    margin-left: 50px;
+    padding: 5px;
+}
+
+.statValue {
+    color: white;
+    float: right;
+    margin-right: 70px;
+}
+
+.pokeInfoCardBottom {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.pokeSprites {
+    height: 100%;
+    width: 100%;
+}
+
+.pokeSpriteImgContainer {
+    margin: auto;
+    width: fit-content;
+}
+
+.pokeSpriteImg {
+    border-radius: 50%;
+    background-color: beige;
+    cursor: pointer;
+    margin: 10px;
+    transition: all 300ms;
+    width: 90px;
+}
+
+.pokeSpriteImg:hover {
+    background-color: rgb(179, 179, 179);
+}
